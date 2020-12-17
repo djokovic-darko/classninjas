@@ -27,7 +27,7 @@ $ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.150, 0.860);
 $ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 
 // Custom transitions
-$t-hover: all 0.2s $ease-out-quad;
+$t-hover: all 0.35s $ease-out-quad;
 $t-slide: all 0.4s $ease-in-quad;
 $t-slide-delay: all 0.4s 0.6s $ease-out-quint;
 $t-slide-delay-slider: all 0.6s 1.2s $ease-out-expo;

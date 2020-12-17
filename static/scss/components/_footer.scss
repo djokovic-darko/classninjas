@@ -1,3 +1,33 @@
-.footer {
-  
+.footer{
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 rem(45) 0;
+    p{
+      color: #959393;
+      font-family: $roboto;
+      font-size: rem(14);
+    }
+  }
+  &__nav{
+    ul{
+      display: flex;
+      li{
+        margin-right: rem(42);
+        &:last-child{
+          margin-right: 0;
+        }
+        a{
+          color: #3f3b3b;
+          font-size: rem(14);
+          font-family: $roboto;
+          transition: $t-hover;
+          &:hover{
+            color: #000;
+          }
+        }
+      }
+    }
+  }
 }

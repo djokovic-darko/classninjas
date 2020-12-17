@@ -1,0 +1,53 @@
+.prices{
+  padding-bottom: rem(80);
+  .section-title{
+    margin-bottom: rem(100);
+  }
+  &__inner{
+    display: flex;
+  }
+  &__item{
+    flex: 0 0 33.33%;
+  }
+  &__item-inner{
+    text-align: center;
+    margin: 0 auto;
+    max-width: rem(270);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    h3{
+      line-height: 1.42;
+      font-size: rem(24);
+      font-weight: 600;
+      margin-bottom: rem(17);
+    }
+    p{
+      color: $body-color-light;
+      font-family: $roboto;
+      margin-bottom: rem(50);
+      flex: 1;
+    }
+    .btn{
+      margin: rem(38) 0 0;
+      width: 100%;
+      font-size: rem(22);
+      padding: rem(24) rem(15);
+      max-width: rem(238);
+    }
+  }
+  &__item-price{
+    font-size: rem(60);
+    font-weight: 700;
+    display: block;
+    margin-bottom: rem(7);
+  }
+  &__item-price-info{
+    font-size: rem(14);
+    line-height: 1;
+    display: block;
+    max-width: rem(210);
+    margin: 0 auto;
+  }
+}

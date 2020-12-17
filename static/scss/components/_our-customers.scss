@@ -1,0 +1,16 @@
+.our-customers{
+  padding-bottom: rem(80);
+  .section-title{
+    margin-bottom: rem(100);
+  }
+  &__inner{
+    display: flex;
+  }
+  &__item{
+
+  }
+  &__item-inner{
+    background-color: #fff;
+    border-radius: 10px;
+  }
+}

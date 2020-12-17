@@ -1,0 +1,21 @@
+.header{
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(30) rem(125) 0;
+  }
+  &__cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .btn{
+      max-width: rem(238);
+      margin-bottom: rem(8);
+    }
+  }
+  &__cta-info{
+    font-size: rem(14);
+    font-weight: 300;
+  }
+}

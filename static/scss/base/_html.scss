@@ -7,7 +7,8 @@ html, body {
 
 html {
   font-weight: normal;
-  font-family: $font-main;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   color: $default-body-text-color;
   line-height: line-height($browser-context, $browser-line-height);
 
@@ -45,17 +46,6 @@ html {
     .header{
       transform: none !important;
     }
-  }
-}
-
-body{
-  padding-top: rem(98);
-
-  @include breakpoint($des-small){
-    padding-top: rem(85);
-  }
-  @include breakpoint($tab-small){
-    padding-top: rem(63);
   }
 }
 

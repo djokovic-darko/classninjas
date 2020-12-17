@@ -1,0 +1,26 @@
+.recommendations{
+  margin-bottom: rem(80);
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logos{
+    p{
+      color: $body-color-light;
+      margin-bottom: rem(10);
+    }
+  }
+  &__logos-wrapper{
+    display: flex;
+    align-items: center;
+  }
+  &__trust-pilot{
+    display: flex;
+    align-items: center;
+  }
+  &__trust-pilot-rate{
+    letter-spacing: -1px;
+    font-size: rem(70);
+    margin-right: rem(8);
+  }
+}

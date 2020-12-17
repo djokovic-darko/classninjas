@@ -1,1 +1,1 @@
-{"version":3,"sources":["webpack:///./static/scss/critical.scss"],"names":[],"mappings":"AAAA;EACE,sBAAoB,EACrB","file":"critical.css","sourcesContent":["h1{\n  color: red!important;\n}\n\n\n// WEBPACK FOOTER //\n// ./static/scss/critical.scss"],"sourceRoot":""}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"critical.css","sourceRoot":""}

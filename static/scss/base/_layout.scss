@@ -32,15 +32,9 @@
 }
 
 .container{
-  width: 100%;
-  padding: 0 16.66vw;
   margin: auto;
-  @include breakpoint($des-medium){
-    padding: 0 8.33vw;
-  }
-  //@include breakpoint($mob){
-  //  padding: 0 rem(20);
-  //}
+  max-width: rem(1175);
+  padding: 0 rem(30);
   @include breakpoint($tab){
     padding: 0 rem(20);
   }

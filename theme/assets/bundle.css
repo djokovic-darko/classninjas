@@ -1,10 +1,3 @@
-@font-face {
-  font-family: "PFEncoreSansProRegular";
-  src: url("../fonts/PFEncoreSansProRegular.eot?1");
-  src: url("../fonts/PFEncoreSansProRegular.eot?1#iefix") format("embedded-opentype"), url("../fonts/PFEncoreSansProRegular.woff2?1") format("woff2"), url("../fonts/PFEncoreSansProRegular.woff?1") format("woff"), url("../fonts/PFEncoreSansProRegular.svg?1#wf") format("svg"), url("../fonts/PFEncoreSansProRegular.ttf?1") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -412,8 +405,9 @@ html, body {
 
 html {
   font-weight: normal;
-  font-family: "PFEncoreSansProRegular";
-  color: #373D44;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #1d293f;
   line-height: 1;
   font-size: .879vw; }
   @media (max-width: 2000px) {
@@ -441,15 +435,6 @@ html {
     html.lock .header {
       -webkit-transform: none !important;
               transform: none !important; }
-
-body {
-  padding-top: 6.125rem; }
-  @media (max-width: 1300px) {
-    body {
-      padding-top: 5.3125rem; } }
-  @media (max-width: 992px) {
-    body {
-      padding-top: 3.9375rem; } }
 
 img {
   display: block;
@@ -515,12 +500,9 @@ img {
     width: auto; }
 
 .container {
-  width: 100%;
-  padding: 0 16.66vw;
-  margin: auto; }
-  @media (max-width: 1600px) {
-    .container {
-      padding: 0 8.33vw; } }
+  margin: auto;
+  max-width: 73.4375rem;
+  padding: 0 1.875rem; }
   @media (max-width: 1200px) {
     .container {
       padding: 0 1.25rem; } }
@@ -576,69 +558,40 @@ a {
 
 p {
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.75; }
 
 h1, .h1 {
-  font-family: "PFEncoreSansProRegular";
-  font-size: 2.8125rem;
-  line-height: 1.11;
-  letter-spacing: -0.125rem;
-  color: #626773;
-  margin-bottom: 2.5rem; }
+  font-size: 3.75rem;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.86px;
+  color: #1d293f; }
 
 h2, .h2 {
-  font-family: "PFEncoreSansProRegular";
-  font-size: 2.25rem;
-  line-height: 1.11;
-  color: #626773;
-  margin-bottom: 1.5625rem; }
-
-h3, .h3 {
-  font-family: "PFEncoreSansProRegular";
-  font-size: 1.75rem;
-  line-height: 1.39;
-  color: #626773; }
-
-h4, .h4 {
-  font-family: "PFEncoreSansProRegular";
-  font-size: 1.5rem;
-  line-height: 1.63;
-  color: #626773; }
-
-h5, .h5 {
-  font-family: "PFEncoreSansProRegular";
-  font-size: 1.25rem;
-  line-height: 1.63;
-  color: #626773; }
-
-h6, .h6 {
-  font-size: 1rem; }
-
-.small {
-  font-size: 0.875rem; }
-
-.display {
-  color: #626773; }
-  .display-1 {
-    font-family: "PFEncoreSansProRegular";
-    font-size: 3.75rem;
-    line-height: 1.17;
-    letter-spacing: -0.15625rem;
-    margin-bottom: 1.5625rem; }
-
-.bold-font {
-  font-family: "PFEncoreSansProRegular"; }
+  font-size: 3.625rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px; }
 
 .text-uppercase {
   text-transform: uppercase; }
 
+.section-title--center {
+  text-align: center; }
+
+.section-title p {
+  color: #7c8087;
+  font-size: 1.125rem;
+  line-height: 1.78;
+  max-width: 46.5625rem;
+  margin: 1.5rem auto 0; }
+
 .btn {
   background-color: transparent;
-  padding: 0.875rem 2.0625rem;
+  padding: 0.9375rem;
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
-  min-width: 10rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -649,10 +602,319 @@ h6, .h6 {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  font-size: 0.75rem;
-  letter-spacing: 0.05375rem;
-  font-family: "PFEncoreSansProRegular";
-  border-radius: 1.1875rem;
-  text-transform: uppercase; }
+  border-radius: 0.3125rem;
+  font-weight: 700;
+  background-color: #14b4f1;
+  color: #fff;
+  -webkit-transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-align: center;
+  line-height: 1.125rem; }
+  .btn:hover {
+    color: #fff;
+    background-color: #0da4de; }
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0 2.8125rem 0; }
+  .footer__inner p {
+    color: #959393;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem; }
+
+.footer__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .footer__nav ul li {
+    margin-right: 2.625rem; }
+    .footer__nav ul li:last-child {
+      margin-right: 0; }
+    .footer__nav ul li a {
+      color: #3f3b3b;
+      font-size: 0.875rem;
+      font-family: "Roboto", sans-serif;
+      -webkit-transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+      .footer__nav ul li a:hover {
+        color: #000; }
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.875rem 7.8125rem 0; }
+
+.header__cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header__cta .btn {
+    max-width: 14.875rem;
+    margin-bottom: 0.5rem; }
+
+.header__cta-info {
+  font-size: 0.875rem;
+  font-weight: 300; }
+
+.hero {
+  margin-bottom: 3.75rem; }
+  .hero__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .hero__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-right: 8.125rem; }
+    .hero__column--form {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 41.435%;
+              flex: 0 0 41.435%;
+      padding-right: 0; }
+    .hero__column h1 {
+      margin-bottom: 1.75rem; }
+  .hero__features-item {
+    margin-bottom: 3rem; }
+    .hero__features-item:last-child {
+      margin-bottom: 0; }
+  .hero__features-item-info {
+    max-width: 23.125rem; }
+    .hero__features-item-info h3 {
+      font-size: 1.3125rem;
+      font-weight: 500;
+      line-height: 1.62;
+      margin-bottom: 0.4375rem; }
+    .hero__features-item-info p {
+      color: #7c8087; }
+  .hero__form {
+    border-radius: 0.75rem;
+    background-color: #14b4f1;
+    padding: 3.8125rem 3.9375rem 5.75rem 3.0625rem;
+    margin-top: 4.125rem; }
+    .hero__form p {
+      color: #fff;
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-bottom: 2.625rem;
+      line-height: normal; }
+    .hero__form .btn {
+      font-size: 1.125rem;
+      background-color: #fed385;
+      color: #3f3b3b;
+      width: 100%;
+      max-width: 19.5rem;
+      margin-top: 4.375rem; }
+      .hero__form .btn:hover {
+        background-color: #eac278; }
+  .hero__form-input-wrapper {
+    margin-bottom: 1rem; }
+    .hero__form-input-wrapper:last-child {
+      margin-bottom: 0; }
+    .hero__form-input-wrapper ::-webkit-input-placeholder {
+      color: #3f3b3b; }
+    .hero__form-input-wrapper ::-moz-placeholder {
+      color: #3f3b3b; }
+    .hero__form-input-wrapper ::-ms-input-placeholder {
+      color: #3f3b3b; }
+    .hero__form-input-wrapper ::placeholder {
+      color: #3f3b3b; }
+  .hero__form-input {
+    background-color: #fff;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.1875rem;
+    color: #3f3b3b;
+    padding: 0 0.9375rem 0 3.25rem;
+    border: 0;
+    font-size: 0.875rem;
+    font-family: "Roboto", sans-serif; }
+
+.recommendations {
+  margin-bottom: 5rem; }
+  .recommendations__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .recommendations__logos p {
+    color: #7c8087;
+    margin-bottom: 0.625rem; }
+  .recommendations__logos-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .recommendations__trust-pilot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .recommendations__trust-pilot-rate {
+    letter-spacing: -1px;
+    font-size: 4.375rem;
+    margin-right: 0.5rem; }
+
+.trial-lesson {
+  margin-bottom: 5rem; }
+  .trial-lesson__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .trial-lesson__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%; }
+    .trial-lesson__item:nth-child(2) {
+      padding-top: 7.5rem; }
+    .trial-lesson__item:nth-child(3) {
+      padding-top: 11.0625rem; }
+  .trial-lesson__item-inner h3 {
+    line-height: 1.42;
+    font-size: 1.5rem;
+    margin-bottom: 0.9375rem;
+    max-width: 10rem; }
+  .trial-lesson__item-inner p {
+    color: #7c8087;
+    max-width: 17.5rem; }
+
+.online-tutoring {
+  margin-bottom: 5rem; }
+  .online-tutoring .section-title {
+    max-width: 46.25rem;
+    margin-bottom: 5.3125rem; }
+  .online-tutoring__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .online-tutoring__video {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 47.176%;
+            flex: 0 0 47.176%; }
+    .online-tutoring__video .media-wrapper {
+      border-radius: 0.625rem;
+      padding-bottom: 56.25%; }
+  .online-tutoring__info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-left: 6.4375rem;
+    padding-top: 0.3125rem; }
+    .online-tutoring__info p {
+      margin-bottom: 3.5625rem;
+      font-size: 1.125rem;
+      line-height: 1.78;
+      max-width: 26.5625rem; }
+  .online-tutoring__cta {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .online-tutoring__cta .btn {
+      max-width: 14.875rem;
+      margin-bottom: 0.5rem; }
+
+.prices {
+  padding-bottom: 5rem; }
+  .prices .section-title {
+    margin-bottom: 6.25rem; }
+  .prices__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .prices__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%; }
+  .prices__item-inner {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 16.875rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%; }
+    .prices__item-inner h3 {
+      line-height: 1.42;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.0625rem; }
+    .prices__item-inner p {
+      color: #7c8087;
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 3.125rem;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+    .prices__item-inner .btn {
+      margin: 2.375rem 0 0;
+      width: 100%;
+      font-size: 1.375rem;
+      padding: 1.5rem 0.9375rem;
+      max-width: 14.875rem; }
+  .prices__item-price {
+    font-size: 3.75rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.4375rem; }
+  .prices__item-price-info {
+    font-size: 0.875rem;
+    line-height: 1;
+    display: block;
+    max-width: 13.125rem;
+    margin: 0 auto; }
+
+.our-customers {
+  padding-bottom: 5rem; }
+  .our-customers .section-title {
+    margin-bottom: 6.25rem; }
+  .our-customers__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .our-customers__item-inner {
+    background-color: #fff;
+    border-radius: 10px; }
 
 /*# sourceMappingURL=bundle.css.map*/
