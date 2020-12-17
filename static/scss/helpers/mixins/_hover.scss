@@ -1,0 +1,23 @@
+@mixin non-touch {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin touch {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @include non-touch() {
+    &:hover {
+      @content;
+    }
+  }
+}

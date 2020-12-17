@@ -1,0 +1,14 @@
+//########################################
+//## FONT VARIABLES ######################
+//########################################
+
+$font-main: "PFEncoreSansProRegular";
+
+@include font-face($font-main, "PFEncoreSansProRegular");
+
+//########################################
+//## SIZES ###############################
+//########################################
+
+$browser-context: 16; // px
+$browser-line-height: 16; // px

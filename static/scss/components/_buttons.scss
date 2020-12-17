@@ -1,0 +1,16 @@
+.btn {
+  background-color: transparent;
+  padding: rem(14) rem(33);
+  box-shadow: none;
+  border: none;
+  min-width: rem(160);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: rem(12);
+  letter-spacing: rem(0.86);
+  font-family: $font-main;
+  border-radius: rem(19);
+  text-transform: uppercase;
+}

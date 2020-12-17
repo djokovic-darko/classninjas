@@ -1,0 +1,6 @@
+# Ignore files that have liquid syntax inside since they will throw errors
+
+src/styles/modules/_color_variables.scss.liquid
+src/styles/modules/_typography.scss.liquid
+src/styles/partials/_product_room_features.scss.liquid
+src/styles/partials/_locations.scss.liquid
