@@ -7,3 +7,6 @@ import 'babel-polyfill';
 import 'jquery';
 import 'svgxuse';
 import 'gsap/index.js';
+import "swiper/js/swiper.js";
+
+

@@ -1,9 +1,9 @@
 import '../scss/style.scss';
-import HomePage from 'pages/HomePage';
+import DefaultCarousel from 'components/DefaultCarousel';
 
 $(document).ready(() => {
-  console.log('ShopyCode');
+  let defaultCarousel = new DefaultCarousel();
+  defaultCarousel.init();
 
-  let homePage = new HomePage();
-  homePage.init();
+  console.log('dek');
 });

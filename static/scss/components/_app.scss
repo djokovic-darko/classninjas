@@ -1,0 +1,38 @@
+.app{
+  padding: rem(66) 0 rem(78);
+  &__inner{
+    display: flex;
+  }
+  &__image{
+    flex: 0 0 45.202%;
+    .media-wrapper{
+      padding-bottom: 100%;
+    }
+  }
+  &__info{
+    flex: 1;
+    padding-left: rem(130);
+    h2{
+      font-size: rem(48);
+      line-height: 1.17;
+      letter-spacing: -0.83px;
+      margin-bottom: rem(26);
+    }
+    p{
+      font-size: rem(18);
+      color: $body-color-light;
+      margin-bottom: rem(50);
+      max-width: rem(398);
+    }
+  }
+  &__download{
+    li{
+      margin-bottom: rem(15);
+      a{
+        img{
+          max-width: rem(239);
+        }
+      }
+    }
+  }
+}

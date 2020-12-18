@@ -1,326 +1,406 @@
 {% layout none %}
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
 
     <title>Landing page</title>
     <link rel="stylesheet" href="{{ 'critical.css' | asset_url }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;900&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="preload" href="{{ 'bundle.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ 'bundle.css' | asset_url }}"></noscript>
+    <link rel="preload" href="{{ 'bundle.css' | asset_url }}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ 'bundle.css' | asset_url }}">
+    </noscript>
+    <script src="{{ 'vendor.js' | asset_url }}" defer></script>
+    <script src="{{ 'bundle.js' | asset_url }}" defer></script>
     <script>
         /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
-        (function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=false}return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){if(link.addEventListener){link.removeEventListener("load",enableStylesheet)}else if(link.attachEvent){link.detachEvent("onload",enableStylesheet)}link.setAttribute("onload",null);link.media=finalMedia}if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i+=1){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",true);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+        (function (w) { "use strict"; if (!w.loadCSS) { w.loadCSS = function () { } } var rp = loadCSS.relpreload = {}; rp.support = (function () { var ret; try { ret = w.document.createElement("link").relList.supports("preload") } catch (e) { ret = false } return function () { return ret } })(); rp.bindMediaToggle = function (link) { var finalMedia = link.media || "all"; function enableStylesheet() { if (link.addEventListener) { link.removeEventListener("load", enableStylesheet) } else if (link.attachEvent) { link.detachEvent("onload", enableStylesheet) } link.setAttribute("onload", null); link.media = finalMedia } if (link.addEventListener) { link.addEventListener("load", enableStylesheet) } else if (link.attachEvent) { link.attachEvent("onload", enableStylesheet) } setTimeout(function () { link.rel = "stylesheet"; link.media = "only x" }); setTimeout(enableStylesheet, 3000) }; rp.poly = function () { if (rp.support()) { return } var links = w.document.getElementsByTagName("link"); for (var i = 0; i < links.length; i += 1) { var link = links[i]; if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) { link.setAttribute("data-loadcss", true); rp.bindMediaToggle(link) } } }; if (!rp.support()) { rp.poly(); var run = w.setInterval(rp.poly, 500); if (w.addEventListener) { w.addEventListener("load", function () { rp.poly(); w.clearInterval(run) }) } else if (w.attachEvent) { w.attachEvent("onload", function () { rp.poly(); w.clearInterval(run) }) } } if (typeof exports !== "undefined") { exports.loadCSS = loadCSS } else { w.loadCSS = loadCSS } }(typeof global !== "undefined" ? global : this));
     </script>
 </head>
 
 <body>
 
-<header class="header">
-    <div class="header__inner">
-        <a href="#" class="header__logo">
-            <img src="{{ '../assets/logo.svg' | asset_url }}" alt="">
-        </a>
-        <div class="header__cta">
-            <a href="#" class="btn">Probestunde vereinbaren</a>
-            <span class="header__cta-info">Kostenlos & unverbindlich</span>
-        </div>
-    </div>
-</header>
-
-<main>
-    <section class="hero">
-        <div class="container">
-            <div class="hero__inner">
-                <div class="hero__column">
-                    <h1>Die Zukunft der Mathe Nachhilfe ist hier!</h1>
-                    <div class="hero__features-wrapper">
-                        <div class="hero__features-arrow">
-                            {% include 'icons-svg', icon: 'long-arrow-2' %}
-                            <span>Jetzt kostenloses
-                                Erstgespräch
-                                vereinbaren.</span>
-                        </div>
-                        <ul class="hero__features">
-                            <li class="hero__features-item">
-                                {% include 'icons-svg', icon: 'after-school-teacher' %}
-                                <div class="hero__features-item-info">
-                                    <h3>Nachhaltiger Lernerfolg</h3>
-                                    <p>Durch Praxisnahe Beispiele und erfahrenes Lehrpersonal effektiven Lernerfolg erreichen.</p>
-                                </div>
-                            </li>
-                            <li class="hero__features-item">
-                                {% include 'icons-svg', icon: 'only-language' %}
-                                <div class="hero__features-item-info">
-                                    <h3>Die selbe Sprache</h3>
-                                    <p>Durch unsere jahrelange Erfahrung auf dem Gebiet der Mathematik Bildung auf einer Ebene mit Ihren Kindern kommunizieren.</p>
-                                </div>
-                            </li>
-                            <li class="hero__features-item">
-                                {% include 'icons-svg', icon: 'top-price' %}
-                                <div class="hero__features-item-info">
-                                    <h3>Top Preis Leistung</h3>
-                                    <p>Ihr Geld wird bestens investiert sein. Mathe Nachhilfe ab € 12,58 pro Stunde. </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="hero__column hero__column--form">
-                    <div class="hero__form">
-                        <p>Ja bitte verständigen Sie
-                            mich bezüglich kostenloser Probestunde.</p>
-                        <div class="hero__form-input-wrapper">
-                            {% include 'icons-svg', icon: 'profile' %}
-                            <input  class="hero__form-input" type="text" placeholder="Vorname, Nachname">
-                        </div>
-                        <div class="hero__form-input-wrapper">
-                            {% include 'icons-svg', icon: 'email' %}
-                            <input  class="hero__form-input" type="text" placeholder="E-Mail Adresse">
-                        </div>
-                        <div class="hero__form-input-wrapper">
-                            {% include 'icons-svg', icon: 'phone' %}
-                            <input  class="hero__form-input" type="text" placeholder="Telefonnummer">
-                        </div>
-
-                        <button type="submit" class="btn">Unverbindliche Anfrage</button>
-                    </div>
-                </div>
+    <header class="header">
+        <div class="header__inner">
+            <a href="#" class="header__logo">
+                <img src="{{ '../assets/logo.svg' | asset_url }}" alt="">
+            </a>
+            <div class="header__cta">
+                <a href="#" class="btn">Probestunde vereinbaren</a>
+                <span class="header__cta-info">Kostenlos & unverbindlich</span>
             </div>
         </div>
-    </section>
+    </header>
 
-    <section class="recommendations">
-        <div class="container">
-            <div class="recommendations__inner">
-                <div class="recommendations__logos">
-                    <p>ClassNinjas wird unter Anderem empfohlen von</p>
-                    <div class="recommendations__logos-wrapper">
-                        <img src="{{ '../assets/recommendations-1.svg' | asset_url }}" alt="">
-                        <img src="{{ '../assets/recommendations-2.svg' | asset_url }}" alt="">
-                        <img src="{{ '../assets/recommendations-3.svg' | asset_url }}" alt="">
-                        <img src="{{ '../assets/recommendations-4.png' | asset_url }}" alt="">
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__inner">
+                    <div class="hero__column">
+                        <h1>Die Zukunft der Mathe Nachhilfe ist hier!</h1>
+                        <div class="hero__features-wrapper">
+                            <div class="hero__features-arrow">
+                                {% include 'icons-svg', icon: 'long-arrow-2' %}
+                                <span>Jetzt kostenloses
+                                    Erstgespräch
+                                    vereinbaren.</span>
+                            </div>
+                            <ul class="hero__features">
+                                <li class="hero__features-item">
+                                    {% include 'icons-svg', icon: 'after-school-teacher' %}
+                                    <div class="hero__features-item-info">
+                                        <h3>Nachhaltiger Lernerfolg</h3>
+                                        <p>Durch Praxisnahe Beispiele und erfahrenes Lehrpersonal effektiven Lernerfolg
+                                            erreichen.</p>
+                                    </div>
+                                </li>
+                                <li class="hero__features-item">
+                                    {% include 'icons-svg', icon: 'only-language' %}
+                                    <div class="hero__features-item-info">
+                                        <h3>Die selbe Sprache</h3>
+                                        <p>Durch unsere jahrelange Erfahrung auf dem Gebiet der Mathematik Bildung auf
+                                            einer Ebene mit Ihren Kindern kommunizieren.</p>
+                                    </div>
+                                </li>
+                                <li class="hero__features-item">
+                                    {% include 'icons-svg', icon: 'top-price' %}
+                                    <div class="hero__features-item-info">
+                                        <h3>Top Preis Leistung</h3>
+                                        <p>Ihr Geld wird bestens investiert sein. Mathe Nachhilfe ab € 12,58 pro Stunde.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="recommendations__trust-pilot">
-                    <div class="recommendations__trust-pilot-rate">4.8</div>
-                    <div class="recommendations__trust-pilot-info">
-                        <img src="{{ '../assets/trustpilot.png' | asset_url }}" alt="">
-                        <img src="{{ '../assets/stars.svg' | asset_url }}" class="recommendations__stars" alt="">
-                        <span class="recommendations__trust-rating-count">203 Rating</span>
+                    <div class="hero__column hero__column--form">
+                        <div class="hero__form">
+                            <p>Ja bitte verständigen Sie
+                                mich bezüglich kostenloser Probestunde.</p>
+                            <div class="hero__form-input-wrapper">
+                                {% include 'icons-svg', icon: 'profile' %}
+                                <input class="hero__form-input" type="text" placeholder="Vorname, Nachname">
+                            </div>
+                            <div class="hero__form-input-wrapper">
+                                {% include 'icons-svg', icon: 'email' %}
+                                <input class="hero__form-input" type="text" placeholder="E-Mail Adresse">
+                            </div>
+                            <div class="hero__form-input-wrapper">
+                                {% include 'icons-svg', icon: 'phone' %}
+                                <input class="hero__form-input" type="text" placeholder="Telefonnummer">
+                            </div>
+
+                            <button type="submit" class="btn">Unverbindliche Anfrage</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <section class="trial-lesson">
-        <div class="container">
-            <div class="section-title section-title--center">
-                <h2>In 3 einfachen Schritten Probestunde testen</h2>
-            </div>
-            <div class="trial-lesson__inner">
-                <div class="trial-lesson__item">
-                    {% include 'icons-svg', icon: 'long-arrow-2' %}
-                    <div class="trial-lesson__item-inner">
-                        <div class="trial-lesson__item-icon">
-                            {% include 'icons-svg', icon: 'event-confirm' %}
+        <section class="recommendations">
+            <div class="container">
+                <div class="recommendations__inner">
+                    <div class="recommendations__logos">
+                        <p>ClassNinjas wird unter Anderem empfohlen von</p>
+                        <div class="recommendations__logos-wrapper">
+                            <img src="{{ '../assets/recommendations-1.svg' | asset_url }}" alt="">
+                            <img src="{{ '../assets/recommendations-2.svg' | asset_url }}" alt="">
+                            <img src="{{ '../assets/recommendations-3.svg' | asset_url }}" alt="">
+                            <img src="{{ '../assets/recommendations-4.png' | asset_url }}" alt="">
                         </div>
-                        <h3>Termin vereinbaren</h3>
-                        <p>We’ve helped over 2,500 job seekers to get into the most popular tech teams.</p>
-                    </div>                   
-                </div>
-                <div class="trial-lesson__item">
-                    {% include 'icons-svg', icon: 'long-arrow-2' %}
-                    <div class="trial-lesson__item-inner">
-                        <div class="trial-lesson__item-icon">
-                            {% include 'icons-svg', icon: 'user-light' %}
-                        </div>
-                        <h3>Persönliche 
-                            Probestunde
-                            absolvieren</h3>
-                        <p>We’ve helped over 2,500 job seekers to get into the most popular tech teams.</p>
-                    </div>                   
-                </div>
-                <div class="trial-lesson__item">
-                    <div class="trial-lesson__item-inner">
-                        <div class="trial-lesson__item-icon">
-                            {% include 'icons-svg', icon: 'check-all' %}
-                        </div>
-                        <h3>Note
-                            verbessern</h3>
-                        <p>We’ve helped over 2,500 job seekers to get into the most popular tech teams.</p>
-                    </div>                   
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="online-tutoring">
-        <div class="container">
-            <div class="section-title">
-                <h2>Online Mathe Nachhilfe,
-                    dies bringt.</h2>
-            </div>
-            <div class="online-tutoring__inner">
-                <div class="online-tutoring__video">
-                    <div class="media-wrapper">
-                        <iframe src="https://www.youtube.com/embed/--DXz2VgjMQ" frameborder="0"
-                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen></iframe>
                     </div>
-                </div>
-                <div class="online-tutoring__info">
-                    <p>Durch moderne und angepasste Lernmethoden welche vor allem in zeiten von Corona angebracht sind, stellen wir das Wissen Ihres Kindes auf das nächste Level um Prüfungen zu bestehen und Fit für die Zukunft zu sein.</p>
-                    <div class="online-tutoring__cta">
-                        <a href="#" class="btn">Probestunde vereinbaren</a>
-                        <span class="header__cta-info">Kostenlos & unverbindlich</span>
+                    <div class="recommendations__trust-pilot">
+                        <div class="recommendations__trust-pilot-rate">4.8</div>
+                        <div class="recommendations__trust-pilot-info">
+                            <img src="{{ '../assets/trustpilot.png' | asset_url }}" alt="">
+                            <img src="{{ '../assets/stars.svg' | asset_url }}" class="recommendations__stars" alt="">
+                            <span class="recommendations__trust-rating-count">203 Rating</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <section class="prices">
-        <div class="container">
-            <div class="section-title section-title--center">
-                <h2>Die beste Investition in die Zukunft Ihrer Kinder. Bildung.</h2>
-                <p>Bei uns stimmt das Kosten Nutzen Verhältnis. <br>Erfahrene Tutoren zu guten Preisen. Für den schulischen Erfolg Ihres Kindes</p>
-            </div>
-            <div class="prices__inner">
-                <div class="prices__item">
-                    <div class="prices__item-inner">
-                        <h3>Einzelstunde</h3>
-                        <p>Eine Stunde 1:1 Coaching von unseren geschulten Tutoren</p>
-                        <div class="prices__item-price-wrapper">
-                            <span class="prices__item-price">€ 14,90</span>
-                            <span class="prices__item-price-info">Preis pro Stunde
-                                Kosten Einzelstunde </span>
-                        </div>
-                        <a href="" class="btn">Jetzt buchen</a>
-                    </div>                   
+        <section class="trial-lesson">
+            <div class="container">
+                <div class="section-title section-title--center">
+                    <h2>In 3 einfachen Schritten Probestunde testen</h2>
                 </div>
-                <div class="prices__item">
-                    <div class="prices__item-inner">
-                        <h3>3 Stunden Paket</h3>
-                        <p>Drei Stunden, 1:1 Coaching von unseren geschulten Tutoren im 3er Paket zu Vorteilspreis.</p>
-                        <div class="prices__item-price-wrapper">
-                            <span class="prices__item-price">€ 13,30</span>
-                            <span class="prices__item-price-info">Preis pro Stunde
-                                Kosten Paket € 39,90 </span>
+                <div class="trial-lesson__inner">
+                    <div class="trial-lesson__item">
+                        {% include 'icons-svg', icon: 'long-arrow-2' %}
+                        <div class="trial-lesson__item-inner">
+                            <div class="trial-lesson__item-icon">
+                                {% include 'icons-svg', icon: 'event-confirm' %}
+                            </div>
+                            <h3>Termin vereinbaren</h3>
+                            <p>We’ve helped over 2,500 job seekers to get into the most popular tech teams.</p>
                         </div>
-                        <a href="" class="btn">Jetzt buchen</a>
-                    </div>                   
-                </div>
-                <div class="prices__item">
-                    <div class="prices__item-inner">
-                        <h3>5 Stunden Paket</h3>
-                        <p>Unser Topseller - 5 Stunden - 1:1 Coaching von unseren geschulten Tutoren im 3er Paket zu Vorteilspreis.</p>
-                        <div class="prices__item-price-wrapper">
-                            <span class="prices__item-price">€ 12,58</span>
-                            <span class="prices__item-price-info">Preis pro Stunde
-                                Kosten Paket € 62,90</span>
+                    </div>
+                    <div class="trial-lesson__item">
+                        {% include 'icons-svg', icon: 'long-arrow-2' %}
+                        <div class="trial-lesson__item-inner">
+                            <div class="trial-lesson__item-icon">
+                                {% include 'icons-svg', icon: 'user-light' %}
+                            </div>
+                            <h3>Persönliche
+                                Probestunde
+                                absolvieren</h3>
+                            <p>We’ve helped over 2,500 job seekers to get into the most popular tech teams.</p>
                         </div>
-                        <a href="" class="btn">Jetzt buchen</a>
-                    </div>                   
+                    </div>
+                    <div class="trial-lesson__item">
+                        <div class="trial-lesson__item-inner">
+                            <div class="trial-lesson__item-icon">
+                                {% include 'icons-svg', icon: 'check-all' %}
+                            </div>
+                            <h3>Note
+                                verbessern</h3>
+                            <p>We’ve helped over 2,500 job seekers to get into the most popular tech teams.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="online-tutoring">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Online Mathe Nachhilfe,
+                        dies bringt.</h2>
+                </div>
+                <div class="online-tutoring__inner">
+                    <div class="online-tutoring__video">
+                        <div class="media-wrapper">
+                            <iframe src="https://www.youtube.com/embed/--DXz2VgjMQ" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="online-tutoring__info">
+                        <p>Durch moderne und angepasste Lernmethoden welche vor allem in zeiten von Corona angebracht
+                            sind, stellen wir das Wissen Ihres Kindes auf das nächste Level um Prüfungen zu bestehen und
+                            Fit für die Zukunft zu sein.</p>
+                        <div class="online-tutoring__cta">
+                            <a href="#" class="btn">Probestunde vereinbaren</a>
+                            <span class="header__cta-info">Kostenlos & unverbindlich</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-    <section class="our-customers">
-        <div class="container">
+        <section class="prices">
+            <div class="container">
+                <div class="section-title section-title--light section-title--center">
+                    <h2>Die beste Investition in die Zukunft Ihrer Kinder. Bildung.</h2>
+                    <p>Bei uns stimmt das Kosten Nutzen Verhältnis. <br>Erfahrene Tutoren zu guten Preisen. Für den
+                        schulischen Erfolg Ihres Kindes</p>
+                </div>
+                <div class="prices__inner">
+                    <div class="prices__item">
+                        <div class="prices__item-inner">
+                            <h3>Einzelstunde</h3>
+                            <p>Eine Stunde 1:1 Coaching von unseren geschulten Tutoren</p>
+                            <div class="prices__item-price-wrapper">
+                                <span class="prices__item-price">€ 14,90</span>
+                                <span class="prices__item-price-info">Preis pro Stunde<br>
+                                    Kosten Einzelstunde </span>
+                            </div>
+                            <a href="" class="btn">Jetzt buchen</a>
+                        </div>
+                    </div>
+                    <div class="prices__item">
+                        <div class="prices__item-inner">
+                            <h3>3 Stunden Paket</h3>
+                            <p>Drei Stunden, 1:1 Coaching von unseren geschulten Tutoren im 3er Paket zu Vorteilspreis.
+                            </p>
+                            <div class="prices__item-price-wrapper">
+                                <span class="prices__item-price">€ 13,30</span>
+                                <span class="prices__item-price-info">Preis pro Stunde<br>
+                                    Kosten Paket € 39,90 </span>
+                            </div>
+                            <a href="" class="btn">Jetzt buchen</a>
+                        </div>
+                    </div>
+                    <div class="prices__item">
+                        <div class="prices__item-inner">
+                            <h3>5 Stunden Paket {% include 'icons-svg', icon: 'star' %}</h3>
+                            <p>Unser Topseller - 5 Stunden - 1:1 Coaching von unseren geschulten Tutoren im 3er Paket zu
+                                Vorteilspreis.</p>
+                            <div class="prices__item-price-wrapper">
+                                <span class="prices__item-price">€ 12,58</span>
+                                <span class="prices__item-price-info">Preis pro Stunde<br>
+                                    Kosten Paket € 62,90</span>
+                            </div>
+                            <a href="" class="btn">Jetzt buchen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-customers">
             <div class="section-title section-title--center">
                 <h2>Tausende zufriedene Kunden die uns Ihre Kinder bereits anvertrauen</h2>
                 <p>Wir sind sehr stolz auf den Erfolg unserer Nachhilfe.</p>
             </div>
-            <div class="our-customers__inner">
-                <div class="our-customers__item">
-                    <div class="our-customers__item-inner">
-                        <div class="our-customers__image">
-                            <div class="media-wrapper">
-                                <img src="{{ '../assets/user.jpg' | asset_url }}" alt="">
+            <div class="our-customers__inner js-customers-carousel">
+                <div class="swiper-wrapper">
+                    <div class="our-customers__item swiper-slide">
+                        <div class="our-customers__item-inner">
+                            <div class="our-customers__image">
+                                <div class="media-wrapper">
+                                    <img src="{{ '../assets/customer-1.jpg' | asset_url }}" alt="">
+                                </div>
                             </div>
+                            <p>I owe these guys my life. Already used their landing page templates for my latest two
+                                projects.</p>
+                            <span class="our-customers__nick">- @thepatwalls</span>
                         </div>
-                        <p>I owe these guys my life. Already used their landing page templates for my latest two projects.</p>
-                        <span class="our-customers__nick">- @thepatwalls</span>
-                    </div>                   
-                </div>
-                <div class="our-customers__item">
-                    <div class="our-customers__item-inner">
-                        <div class="our-customers__image">
-                            <div class="media-wrapper">
-                                <img src="{{ '../assets/user.jpg' | asset_url }}" alt="">
+                    </div>
+                    <div class="our-customers__item swiper-slide">
+                        <div class="our-customers__item-inner">
+                            <div class="our-customers__image">
+                                <div class="media-wrapper">
+                                    <img src="{{ '../assets/customer-2.jpg' | asset_url }}" alt="">
+                                </div>
                             </div>
+                            <p>Time is the most precious thing you have when bootstrapping. You can't take time to
+                                ponder on design…</p>
+                            <span class="our-customers__nick">- @thepatwalls</span>
                         </div>
-                        <p>Time is the most precious thing you have when bootstrapping. You can't take time to ponder on design…</p>
-                        <span class="our-customers__nick">- @thepatwalls</span>
-                    </div>                   
-                </div>
-                <div class="our-customers__item">
-                    <div class="our-customers__item-inner">
-                        <div class="our-customers__image">
-                            <div class="media-wrapper">
-                                <img src="{{ '../assets/user.jpg' | asset_url }}" alt="">
+                    </div>
+                    <div class="our-customers__item swiper-slide">
+                        <div class="our-customers__item-inner">
+                            <div class="our-customers__image">
+                                <div class="media-wrapper">
+                                    <img src="{{ '../assets/customer-3.jpg' | asset_url }}" alt="">
+                                </div>
                             </div>
+                            <p>I owe these guys my life. Already used their landing page templates for my latest two
+                                projects.</p>
+                            <span class="our-customers__nick">- @thepatwalls</span>
                         </div>
-                        <p>I owe these guys my life. Already used their landing page templates for my latest two projects.</p>
-                        <span class="our-customers__nick">- @thepatwalls</span>
-                    </div>                   
-                </div>
-                <div class="our-customers__item">
-                    <div class="our-customers__item-inner">
-                        <div class="our-customers__image">
-                            <div class="media-wrapper">
-                                <img src="{{ '../assets/user.jpg' | asset_url }}" alt="">
+                    </div>
+                    <div class="our-customers__item swiper-slide">
+                        <div class="our-customers__item-inner">
+                            <div class="our-customers__image">
+                                <div class="media-wrapper">
+                                    <img src="{{ '../assets/customer-4.jpg' | asset_url }}" alt="">
+                                </div>
                             </div>
+                            <p>I owe these guys my life. Already used their landing page templates for my latest two
+                                projects.</p>
+                            <span class="our-customers__nick">- @thepatwalls</span>
                         </div>
-                        <p>I owe these guys my life. Already used their landing page templates for my latest two projects.</p>
-                        <span class="our-customers__nick">- @thepatwalls</span>
-                    </div>                   
+                    </div>
+                    <div class="our-customers__item swiper-slide">
+                        <div class="our-customers__item-inner">
+                            <div class="our-customers__image">
+                                <div class="media-wrapper">
+                                    <img src="{{ '../assets/customer-2.jpg' | asset_url }}" alt="">
+                                </div>
+                            </div>
+                            <p>Time is the most precious thing you have when bootstrapping. You can't take time to
+                                ponder on design…</p>
+                            <span class="our-customers__nick">- @thepatwalls</span>
+                        </div>
+                    </div>
+                    <div class="our-customers__item swiper-slide">
+                        <div class="our-customers__item-inner">
+                            <div class="our-customers__image">
+                                <div class="media-wrapper">
+                                    <img src="{{ '../assets/customer-3.jpg' | asset_url }}" alt="">
+                                </div>
+                            </div>
+                            <p>I owe these guys my life. Already used their landing page templates for my latest two
+                                projects.</p>
+                            <span class="our-customers__nick">- @thepatwalls</span>
+                        </div>
+                    </div>
+                    <div class="our-customers__item swiper-slide">
+                        <div class="our-customers__item-inner">
+                            <div class="our-customers__image">
+                                <div class="media-wrapper">
+                                    <img src="{{ '../assets/customer-4.jpg' | asset_url }}" alt="">
+                                </div>
+                            </div>
+                            <p>I owe these guys my life. Already used their landing page templates for my latest two
+                                projects.</p>
+                            <span class="our-customers__nick">- @thepatwalls</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="js-customers-pagination carousel-pagination"></div>
+        </section>
+
+        <section class="app">
+            <div class="container">
+                <div class="app__inner">
+                    <div class="app__image">
+                        <div class="media-wrapper">
+                            <img src="{{ '../assets/app.png' | asset_url }}" alt="">
+                        </div>
+                    </div>
+                    <div class="app__info">
+                        <h2>Zusatz Training per App</h2>
+                        <p>Der Vorteil. Die Kombination aus 1:1 Online Nachhilfe und unserer beliebten App mit mehr als
+                            300 Tausend Downloads.</p>
+                        <ul class="app__download">
+                            <li>
+                                <a href=""><img src="{{ '../assets/app-store@2x.png' | asset_url }}"
+                                        alt="App store"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="{{ '../assets/google-play@2x.png' | asset_url }}"
+                                        alt="Google play"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#">
+                    <img src="{{ '../assets/logo.svg' | asset_url }}" alt="">
+                </a>
+                <nav class="footer__nav">
+                    <ul>
+                        <li>
+                            <a href="">Impressum</a>
+                        </li>
+                        <li>
+                            <a href="">Datenschutz</a>
+                        </li>
+                        <li>
+                            <a href="">AGB</a>
+                        </li>
+                        <li>
+                            <a href="">Über Uns</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p>classninjas.com ©2021</p>
+            </div>
         </div>
-    </section>
-
-
-</main>
-
-<footer class="footer">
-    <div class="container">
-        <div class="footer__inner">
-            <a href="#">
-                <img src="{{ '../assets/logo.svg' | asset_url }}" alt="">
-            </a>
-            <nav class="footer__nav">
-                <ul>
-                    <li>
-                        <a href="">Impressum</a>
-                    </li>
-                    <li>
-                        <a href="">Datenschutz</a>
-                    </li>
-                    <li>
-                        <a href="">AGB</a>
-                    </li>
-                    <li>
-                        <a href="">Über Uns</a>
-                    </li>
-                </ul>
-            </nav>
-            <p>classninjas.com ©2021</p>
-        </div>       
-    </div>
-</footer>
-
-<script type="text/javascript" src="{{ 'vendor.js' | asset_url }}" async></script>
-<script type="text/javascript" src="{{ 'bundle.js' | asset_url }}" async></script>
+    </footer>
 </body>
+
 </html>
