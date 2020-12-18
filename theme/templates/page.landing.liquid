@@ -22,7 +22,7 @@
 
 <header class="header">
     <div class="header__inner">
-        <a href="#">
+        <a href="#" class="header__logo">
             <img src="{{ '../assets/logo.svg' | asset_url }}" alt="">
         </a>
         <div class="header__cta">
@@ -38,38 +38,52 @@
             <div class="hero__inner">
                 <div class="hero__column">
                     <h1>Die Zukunft der Mathe Nachhilfe ist hier!</h1>
-                    <ul class="hero__features">
-                        <li class="hero__features-item">
-                            <div class="hero__features-item-info">
-                                <h3>Nachhaltiger Lernerfolg</h3>
-                                <p>Durch Praxisnahe Beispiele und erfahrenes Lehrpersonal effektiven Lernerfolg erreichen.</p>
-                            </div>
-                        </li>
-                        <li class="hero__features-item">
-                            <div class="hero__features-item-info">
-                                <h3>Die selbe Sprache</h3>
-                                <p>Durch unsere jahrelange Erfahrung auf dem Gebiet der Mathematik Bildung auf einer Ebene mit Ihren Kindern kommunizieren.</p>
-                            </div>
-                        </li>
-                        <li class="hero__features-item">
-                            <div class="hero__features-item-info">
-                                <h3>Top Preis Leistung</h3>
-                                <p>Ihr Geld wird bestens investiert sein. Mathe Nachhilfe ab € 12,58 pro Stunde. </p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="hero__features-wrapper">
+                        <div class="hero__features-arrow">
+                            {% include 'icons-svg', icon: 'long-arrow-2' %}
+                            <span>Jetzt kostenloses
+                                Erstgespräch
+                                vereinbaren.</span>
+                        </div>
+                        <ul class="hero__features">
+                            <li class="hero__features-item">
+                                {% include 'icons-svg', icon: 'after-school-teacher' %}
+                                <div class="hero__features-item-info">
+                                    <h3>Nachhaltiger Lernerfolg</h3>
+                                    <p>Durch Praxisnahe Beispiele und erfahrenes Lehrpersonal effektiven Lernerfolg erreichen.</p>
+                                </div>
+                            </li>
+                            <li class="hero__features-item">
+                                {% include 'icons-svg', icon: 'only-language' %}
+                                <div class="hero__features-item-info">
+                                    <h3>Die selbe Sprache</h3>
+                                    <p>Durch unsere jahrelange Erfahrung auf dem Gebiet der Mathematik Bildung auf einer Ebene mit Ihren Kindern kommunizieren.</p>
+                                </div>
+                            </li>
+                            <li class="hero__features-item">
+                                {% include 'icons-svg', icon: 'top-price' %}
+                                <div class="hero__features-item-info">
+                                    <h3>Top Preis Leistung</h3>
+                                    <p>Ihr Geld wird bestens investiert sein. Mathe Nachhilfe ab € 12,58 pro Stunde. </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="hero__column hero__column--form">
                     <div class="hero__form">
                         <p>Ja bitte verständigen Sie
                             mich bezüglich kostenloser Probestunde.</p>
                         <div class="hero__form-input-wrapper">
+                            {% include 'icons-svg', icon: 'profile' %}
                             <input  class="hero__form-input" type="text" placeholder="Vorname, Nachname">
                         </div>
                         <div class="hero__form-input-wrapper">
+                            {% include 'icons-svg', icon: 'email' %}
                             <input  class="hero__form-input" type="text" placeholder="E-Mail Adresse">
                         </div>
                         <div class="hero__form-input-wrapper">
+                            {% include 'icons-svg', icon: 'phone' %}
                             <input  class="hero__form-input" type="text" placeholder="Telefonnummer">
                         </div>
 
@@ -86,16 +100,17 @@
                 <div class="recommendations__logos">
                     <p>ClassNinjas wird unter Anderem empfohlen von</p>
                     <div class="recommendations__logos-wrapper">
-                        <img src="{{ '../assets/logo.svg' | asset_url }}" alt="">
-                        <img src="{{ '../assets/logo.svg' | asset_url }}" alt="">
-                        <img src="{{ '../assets/logo.svg' | asset_url }}" alt="">
-                        <img src="{{ '../assets/logo.svg' | asset_url }}" alt="">
+                        <img src="{{ '../assets/recommendations-1.svg' | asset_url }}" alt="">
+                        <img src="{{ '../assets/recommendations-2.svg' | asset_url }}" alt="">
+                        <img src="{{ '../assets/recommendations-3.svg' | asset_url }}" alt="">
+                        <img src="{{ '../assets/recommendations-4.png' | asset_url }}" alt="">
                     </div>
                 </div>
                 <div class="recommendations__trust-pilot">
                     <div class="recommendations__trust-pilot-rate">4.8</div>
                     <div class="recommendations__trust-pilot-info">
-                        <span class="recommendations__trust-pilot-title"></span>
+                        <img src="{{ '../assets/trustpilot.png' | asset_url }}" alt="">
+                        <img src="{{ '../assets/stars.svg' | asset_url }}" class="recommendations__stars" alt="">
                         <span class="recommendations__trust-rating-count">203 Rating</span>
                     </div>
                 </div>
@@ -111,15 +126,21 @@
             </div>
             <div class="trial-lesson__inner">
                 <div class="trial-lesson__item">
+                    {% include 'icons-svg', icon: 'long-arrow-2' %}
                     <div class="trial-lesson__item-inner">
-                        <div class="trial-lesson__item-icon"></div>
+                        <div class="trial-lesson__item-icon">
+                            {% include 'icons-svg', icon: 'event-confirm' %}
+                        </div>
                         <h3>Termin vereinbaren</h3>
                         <p>We’ve helped over 2,500 job seekers to get into the most popular tech teams.</p>
                     </div>                   
                 </div>
                 <div class="trial-lesson__item">
+                    {% include 'icons-svg', icon: 'long-arrow-2' %}
                     <div class="trial-lesson__item-inner">
-                        <div class="trial-lesson__item-icon"></div>
+                        <div class="trial-lesson__item-icon">
+                            {% include 'icons-svg', icon: 'user-light' %}
+                        </div>
                         <h3>Persönliche 
                             Probestunde
                             absolvieren</h3>
@@ -128,7 +149,9 @@
                 </div>
                 <div class="trial-lesson__item">
                     <div class="trial-lesson__item-inner">
-                        <div class="trial-lesson__item-icon"></div>
+                        <div class="trial-lesson__item-icon">
+                            {% include 'icons-svg', icon: 'check-all' %}
+                        </div>
                         <h3>Note
                             verbessern</h3>
                         <p>We’ve helped over 2,500 job seekers to get into the most popular tech teams.</p>

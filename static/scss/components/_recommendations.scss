@@ -1,22 +1,35 @@
 .recommendations{
-  margin-bottom: rem(80);
+  margin-bottom: rem(70);
   &__inner{
     display: flex;
     justify-content: space-between;
+    img{
+      margin-right: rem(24);
+    }
   }
   &__logos{
     p{
       color: $body-color-light;
       margin-bottom: rem(10);
+      padding-top: rem(30);
     }
   }
   &__logos-wrapper{
     display: flex;
     align-items: center;
   }
+  &__trust-rating-count{
+    display: block;
+    margin: rem(4) 0;
+    padding-left: rem(8);
+  }
+  &__stars{
+    margin: rem(12) 0 rem(16) rem(6);
+  }
   &__trust-pilot{
     display: flex;
     align-items: center;
+    margin-right: 8.5%;
   }
   &__trust-pilot-rate{
     letter-spacing: -1px;

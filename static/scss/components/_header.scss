@@ -1,14 +1,17 @@
 .header{
   &__inner{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: rem(30) rem(125) 0;
+  }
+  &__logo{
+    margin-top: rem(19);
   }
   &__cta{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     .btn{
       max-width: rem(238);
       margin-bottom: rem(8);
