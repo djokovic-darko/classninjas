@@ -4,17 +4,37 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 0 rem(45) 0;
+    @include breakpoint($mob-small) {
+      display: block;
+    }
     p{
       color: #959393;
       font-family: $roboto;
       font-size: rem(14);
+      @include breakpoint($mob-small) {
+        font-size: rem(15);
+      }
     }
   }
   &__nav{
+  @include breakpoint($mob-small) {
+    margin-bottom: rem(40);
+    margin-top: rem(40);
+  }
     ul{
       display: flex;
+      @include breakpoint($mob-small) {
+        display: block;
+      }
       li{
         margin-right: rem(42);
+        @include breakpoint($mob-small) {
+          margin-right: 0;
+          margin-bottom: rem(25);
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
         &:last-child{
           margin-right: 0;
         }
@@ -23,6 +43,9 @@
           font-size: rem(14);
           font-family: $roboto;
           transition: $t-hover;
+          @include breakpoint($mob-small) {
+            font-size: rem(15);
+          }
           &:hover{
             color: #000;
           }

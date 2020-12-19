@@ -3,8 +3,8 @@
   &__inner{
     display: flex;
     justify-content: space-between;
-    img{
-      margin-right: rem(24);
+    @include breakpoint($mob) {
+      display: block;
     }
   }
   &__logos{
@@ -12,11 +12,29 @@
       color: $body-color-light;
       margin-bottom: rem(10);
       padding-top: rem(30);
+      @include breakpoint($mob) {
+        margin-bottom: rem(25);
+      }
     }
   }
   &__logos-wrapper{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    @include breakpoint($mob) {
+      margin-bottom: rem(30);
+      flex-direction: column;
+    }
+    img {
+      margin-right: rem(24);
+      margin-bottom: rem(10);
+      @include breakpoint($mob) {
+        margin-bottom: rem(20);
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
   }
   &__trust-rating-count{
     display: block;
@@ -30,6 +48,12 @@
     display: flex;
     align-items: center;
     margin-right: 8.5%;
+    @include breakpoint($des-small) {
+      margin-right: 0;
+    }
+    @include breakpoint($mob) {
+      justify-content: center;
+    }
   }
   &__trust-pilot-rate{
     letter-spacing: -1px;

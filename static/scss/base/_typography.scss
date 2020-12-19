@@ -24,6 +24,9 @@ h1, .h1 {
   line-height: 1.08;
   letter-spacing: -0.86px;
   color: $body-color;
+  @include breakpoint($des-small) {
+    font-size: rem(50);
+  }
 }
 
 h2, .h2 {
@@ -31,6 +34,9 @@ h2, .h2 {
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -1px;
+  @include breakpoint($des-small) {
+    font-size: rem(48);
+  }
 }
 
 
@@ -47,6 +53,9 @@ h2, .h2 {
       font-size: rem(60);
       font-weight: 600;
       color: #3f3b3b;
+      @include breakpoint($des-small) {
+        font-size: rem(50);
+      }
     }
   }
   p{

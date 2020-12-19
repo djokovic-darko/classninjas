@@ -2,9 +2,18 @@
   padding: rem(66) 0 rem(78);
   &__inner{
     display: flex;
+    padding-left: rem(35);
+    @include breakpoint($mob) {
+      display: block;
+      padding-left: 0;
+    }
   }
   &__image{
-    flex: 0 0 45.202%;
+    flex: 0 0 46.667%;
+    @include breakpoint($mob) {
+      margin-bottom: rem(40);
+      max-width: rem(504);
+    }
     .media-wrapper{
       padding-bottom: 100%;
     }
@@ -12,6 +21,12 @@
   &__info{
     flex: 1;
     padding-left: rem(130);
+    @include breakpoint($tab-small) {
+      padding-left: rem(65);
+    }
+    @include breakpoint($mob) {
+      padding-left: 0;
+    }
     h2{
       font-size: rem(48);
       line-height: 1.17;

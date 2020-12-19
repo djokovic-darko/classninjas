@@ -62,15 +62,30 @@ var DefaultCarousel = /*#__PURE__*/function () {
     key: "carousel",
     value: function carousel() {
       var defaultSwiper = new __WEBPACK_IMPORTED_MODULE_1_swiper_js_swiper_js___default.a(".js-customers-carousel", {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
         loop: true,
-        spaceBetween: 30,
         pagination: {
           el: ".js-customers-pagination",
           clickable: true
         },
-        breakpoints: {}
+        breakpoints: {
+          567: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 20
+          },
+          800: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 30
+          },
+          992: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 30
+          }
+        }
       });
     }
   }]);

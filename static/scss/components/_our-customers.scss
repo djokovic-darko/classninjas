@@ -6,6 +6,9 @@
   .section-title{
     max-width: rem(763);
     margin: 0 auto rem(60);
+    @include breakpoint($mob) {
+      padding: 0 rem(30);
+    }
     h2{
         font-size: rem(48);
         line-height: 1.17;
@@ -16,6 +19,9 @@
   &__inner{
     margin: 0 rem(55);
     overflow: hidden;
+    @include breakpoint($mob) {
+      margin: 0 rem(30);
+    }
   }
   &__item{
     height: auto;
@@ -55,6 +61,10 @@
   left: rem(55);
   z-index: 1;
   display: flex;
+  @include breakpoint($mob) {
+    left: rem(30);
+    bottom: rem(120);
+  }
 
   .swiper-pagination-bullet {
     width: rem(29);

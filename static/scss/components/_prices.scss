@@ -3,12 +3,25 @@
   .section-title{
     max-width: rem(932);
     margin: 0 auto rem(95);
+    @include breakpoint($mob) {
+      margin-bottom: rem(60);
+    }
   }
   &__inner{
     display: flex;
+    @include breakpoint($mob) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__item{
     flex: 0 0 33.33%;
+    @include breakpoint($mob) {
+      margin-bottom: rem(50);
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
   }
   &__item-inner{
     text-align: center;

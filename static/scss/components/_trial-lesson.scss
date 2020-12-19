@@ -1,22 +1,47 @@
 .trial-lesson{
   margin-bottom: rem(98);
+  .section-title{
+    @include breakpoint($mob) {
+      margin-bottom: rem(50);
+    }
+  }
   &__inner{
     display: flex;
     margin-top: rem(20);
+    padding-left: rem(35);
+    @include breakpoint($mob) {
+      display: block;
+      padding-left: 0;
+    }
   }
   &__item{
     flex: 0 0 33.33%;
     position: relative;
+    @include breakpoint($mob) {
+      margin-bottom: rem(50);
+    }
     &:nth-child(1){
       .icon--long-arrow-2{
         top: rem(72);
         position: absolute;
         left: 37%;
+        max-width: 60%;
+        @include breakpoint($tab-small) {
+          left: 41%;
+          max-width: 55%;
+        }
+        @include breakpoint($mob) {
+          display: none;
+        }
       }
     }
     &:nth-child(2){
       margin-top: rem(120);
       padding-left: rem(15);
+      @include breakpoint($mob) {
+        margin-top: 0;
+        padding-left: 0;
+      }
       .trial-lesson__item-icon{
         margin-bottom: rem(28);
       }
@@ -25,11 +50,23 @@
         position: absolute;
         left: 39%;
         transform: scaleY(-1) rotate(-35deg);
+        max-width: 61%;
+        @include breakpoint($tab-small) {
+          left: 44%;
+          max-width: 55%;
+        }
+        @include breakpoint($mob) {
+          display: none;
+        }
       }
     }
     &:nth-child(3){
       margin-top: rem(177);
       padding-left: rem(20);
+      @include breakpoint($mob) {
+        margin-top: 0;
+        padding-left: 0;
+      }
     }
   }
   &__item-icon{
@@ -44,16 +81,32 @@
     margin-bottom: rem(38);
   }
   &__item-inner{
+    @include breakpoint($mob) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    @include breakpoint($mob-small) {
+      align-items: flex-start;
+      text-align: left;
+    }
     h3{
       line-height: 1.42;
       font-size: rem(24);
       margin-bottom: rem(15);
       max-width: rem(160);
+      @include breakpoint($mob-small) {
+        max-width: 85%;
+      }
     }
     p{
       color: $body-color-light;
       max-width: rem(270);
       font-family: $roboto;
+      @include breakpoint($mob-small) {
+        max-width: 95%;
+      }
     }
   }
 }
