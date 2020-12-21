@@ -3,12 +3,12 @@ html, body {
   display: block;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-weight: 500;
 }
 
 html {
-  font-weight: normal;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
   color: $default-body-text-color;
   line-height: line-height($browser-context, $browser-line-height);
 

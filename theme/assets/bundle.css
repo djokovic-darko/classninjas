@@ -401,12 +401,12 @@ html, body {
   width: 100%;
   display: block;
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-weight: 500; }
 
 html {
-  font-weight: normal;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
   color: #1d293f;
   line-height: 1;
   font-size: .879vw; }
@@ -555,14 +555,20 @@ a {
 
 p {
   font-size: 1rem;
-  line-height: 1.75; }
+  line-height: 1.75;
+  font-family: 'Montserrat', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1d293f;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: none;
+  letter-spacing: normal; }
 
 h1, .h1 {
   font-size: 3.75rem;
   font-weight: 900;
   line-height: 1.08;
-  letter-spacing: -0.86px;
-  color: #1d293f; }
+  letter-spacing: -0.86px; }
   @media (max-width: 1360px) {
     h1, .h1 {
       font-size: 3.125rem; } }
@@ -571,7 +577,8 @@ h2, .h2 {
   font-size: 3.625rem;
   font-weight: 900;
   line-height: 1.1;
-  letter-spacing: -1px; }
+  letter-spacing: -1px;
+  font-family: 'Montserrat', sans-serif; }
   @media (max-width: 1360px) {
     h2, .h2 {
       font-size: 3rem; } }
@@ -752,13 +759,17 @@ h2, .h2 {
           justify-content: center;
   position: relative;
   border-radius: 0.3125rem;
+  font-size: 1rem;
   font-weight: 700;
   background-color: #14b4f1;
   color: #fff;
   -webkit-transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-align: center;
-  line-height: 1.125rem; }
+  line-height: 1.125rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: normal;
+  text-transform: none; }
   .btn:hover {
     color: #fff;
     background-color: #0da4de; }
@@ -837,11 +848,9 @@ h2, .h2 {
     .header__inner {
       padding: 1.25rem 1.875rem 0; } }
 
-.header__logo {
-  margin-top: 1.1875rem; }
-  @media (max-width: 800px) {
-    .header__logo img {
-      max-width: 8.75rem; } }
+@media (max-width: 800px) {
+  .header__logo img {
+    max-width: 8.75rem; } }
 
 .header__cta {
   display: -webkit-box;

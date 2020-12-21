@@ -8,13 +8,16 @@
   justify-content: center;
   position: relative;
   border-radius: rem(5);
+  font-size: rem(16);
   font-weight: 700;
   background-color: $main-color;
   color: #fff;
   transition: $t-hover;
   text-align: center;
   line-height: rem(18);
-
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
   &:hover{
     color: #fff;
     background-color: $main-color-dark;

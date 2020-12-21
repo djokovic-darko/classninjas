@@ -15,15 +15,21 @@ a {
 p {
   font-size: rem(16);
   line-height: 1.75;
+  font-family: 'Montserrat', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6{
+  color: $body-color;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+}
 
 h1, .h1 {
   font-size: rem(60);
   font-weight: 900;
   line-height: 1.08;
   letter-spacing: -0.86px;
-  color: $body-color;
   @include breakpoint($des-small) {
     font-size: rem(50);
   }
@@ -34,6 +40,7 @@ h2, .h2 {
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -1px;
+  font-family: 'Montserrat', sans-serif;
   @include breakpoint($des-small) {
     font-size: rem(48);
   }
