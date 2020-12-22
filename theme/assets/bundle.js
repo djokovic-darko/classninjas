@@ -1,13 +1,13 @@
 webpackJsonp([0],{
 
-/***/ 146:
+/***/ 145:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_style_scss__ = __webpack_require__(147);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_style_scss__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scss_style_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_components_DefaultCarousel__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_components_DefaultCarousel__ = __webpack_require__(147);
 
 
 $(document).ready(function () {
@@ -19,22 +19,21 @@ $(document).ready(function () {
 
 /***/ }),
 
-/***/ 147:
+/***/ 146:
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n@import \"~swiper/src/swiper\";\n^\n      File to import not found or unreadable: ~swiper/src/swiper.\n      in /Users/mac/PhpstormProjects/class-ninjas.test/static/scss/style.scss (line 53, column 1)\n    at /Users/mac/PhpstormProjects/class-ninjas.test/node_modules/webpack/lib/NormalModule.js:195:19\n    at /Users/mac/PhpstormProjects/class-ninjas.test/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/mac/PhpstormProjects/class-ninjas.test/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/mac/PhpstormProjects/class-ninjas.test/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.callback (/Users/mac/PhpstormProjects/class-ninjas.test/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/Users/mac/PhpstormProjects/class-ninjas.test/node_modules/neo-async/async.js:8069:18)\n    at options.error (/Users/mac/PhpstormProjects/class-ninjas.test/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ }),
 
-/***/ 148:
+/***/ 147:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DefaultCarousel; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_modules_es6_object_assign_js__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_modules_es6_object_assign_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_modules_es6_object_assign_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_swiper_js_swiper_js__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_swiper_js_swiper_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_swiper_js_swiper_js__);
+throw new Error("Cannot find module \"swiper/js/swiper.js\"");
 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -97,5 +96,5 @@ var DefaultCarousel = /*#__PURE__*/function () {
 
 /***/ })
 
-},[146]);
+},[145]);
 //# sourceMappingURL=bundle.js.map
